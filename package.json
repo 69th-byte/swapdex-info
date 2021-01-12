@@ -13,7 +13,7 @@
     "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
-    "@uniswap/token-lists": "https://github.com/69th-byte/swapdex-default-token-list.git",
+    "@uniswap/token-lists": "^1.0.0-beta.19",
     "ajv": "^6.12.4",
     "animated-number-react": "^0.1.1",
     "apollo-cache-inmemory": "^1.6.3",
