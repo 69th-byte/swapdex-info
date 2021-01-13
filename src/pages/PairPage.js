@@ -201,7 +201,6 @@ function PairPage({ pairAddress, history }) {
 
   return (
     <PageWrapper>
-      <ThemedBackground backgroundColor={transparentize(0.6, backgroundColor)} />
       <span />
       <Warning
         type={'pair'}
@@ -476,7 +475,7 @@ function PairPage({ pairAddress, history }) {
                       <CopyHelper toCopy={token1?.id} />
                     </AutoRow>
                   </Column>
-                  <ButtonLight color={backgroundColor}>
+                  <ButtonLight color={'#fff'}>
                     <Link color={backgroundColor} external href={'https://etherscan.io/address/' + pairAddress}>
                       View on Etherscan ↗
                     </Link>

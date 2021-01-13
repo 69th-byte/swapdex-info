@@ -7,10 +7,10 @@ import { RowBetween } from '../Row'
 import { StyledIcon } from '..'
 
 const Base = styled(RebassButton)`
-  padding: 8px 12px;
+  padding: 12px 12px;
   font-size: 0.825rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 1rem;
   cursor: pointer;
   outline: none;
   border: 1px solid transparent;
@@ -60,8 +60,8 @@ const ContentWrapper = styled.div`
 `
 
 export const ButtonLight = styled(Base)`
-  background-color: ${({ color, theme }) => (color ? transparentize(0.9, color) : transparentize(0.9, theme.primary1))};
-  color: ${({ color, theme }) => (color ? darken(0.1, color) : theme.primary1)};
+  background:linear-gradient(125deg, rgb(177, 45, 134), rgb(245, 62, 130));
+  color: #fff;
 
   min-width: fit-content;
   border-radius: 12px;
@@ -97,14 +97,14 @@ export function ButtonDropdown({ disabled = false, children, open, ...rest }) {
 }
 
 export const ButtonDark = styled(Base)`
-  background-color: ${({ color, theme }) => (color ? color : theme.primary1)};
+  background-color: #e52191;
   color: white;
   width: fit-content;
   border-radius: 12px;
   white-space: nowrap;
 
   :hover {
-    background-color: ${({ color, theme }) => (color ? darken(0.1, color) : darken(0.1, theme.primary1))};
+    background-color: ${() => darken(0.1, '#e52191')};
   }
 `
 
