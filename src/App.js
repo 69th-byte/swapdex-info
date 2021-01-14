@@ -57,7 +57,7 @@ const Center = styled.div`
   height: 100%;
   z-index: 9999;
   transition: width 0.25s ease;
-  background-color: #2a2735;
+  background-color: ${({theme}) => theme.backgroundColor};
 `
 
 const WarningWrapper = styled.div`

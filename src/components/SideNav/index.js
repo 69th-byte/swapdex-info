@@ -15,7 +15,7 @@ import Toggle from '../Toggle'
 
 const Wrapper = styled.div`
   height: ${({ isMobile }) => (isMobile ? 'initial' : '100vh')};
-  background-color: ${({ theme }) => transparentize(1, theme.bg1)};
+  background-color: #141420; /*${({ theme }) => transparentize(1, theme.bg1)};*/
   color: ${({ theme }) => theme.text1};
   padding: 0.5rem 0.5rem 0.5rem 0.75rem;
   position: sticky;

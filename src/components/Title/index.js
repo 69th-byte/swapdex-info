@@ -4,7 +4,9 @@ import styled from 'styled-components'
 
 import { Flex } from 'rebass'
 import { RowFixed } from '../Row'
-import Logo from '../../assets/logo.png'
+import LogoDark from '../../assets/logo.png'
+import LogoLight from '../../assets/logo_light.png';
+import {useDarkModeManager} from "../../contexts/LocalStorage";
 
 const TitleWrapper = styled.div`
   text-decoration: none;
@@ -16,8 +18,12 @@ const TitleWrapper = styled.div`
   z-index: 10;
 `
 
-export default function Title() {
+const Title = () => {
   const history = useHistory()
+
+  //const [darkMode] = useDarkModeManager();
+  //const Logo = darkMode ? LogoDark : LogoLight;
+  const Logo = LogoDark;
 
   return (
     <TitleWrapper onClick={() => history.push('/')}>
@@ -30,4 +36,6 @@ export default function Title() {
       </Flex>
     </TitleWrapper>
   )
-}
+};
+
+export default Title;

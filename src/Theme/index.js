@@ -15,7 +15,7 @@ const theme = (darkMode, color) => ({
   textColor: darkMode ? color : 'black',
 
   panelColor: darkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0)',
-  backgroundColor: darkMode ? '#2a2735' : '#F7F8FA',
+  backgroundColor: darkMode ? '#2a2735' : '#f4f3f4',
 
   uniswapPink: darkMode ? '#ff007a' : 'black',
 
@@ -121,7 +121,7 @@ export const Link = styled.a.attrs({
 })`
   text-decoration: none;
   cursor: pointer;
-  color: ${({ theme }) => theme.primary1};
+  color: ${({ theme }) => theme.link};
   font-weight: 500;
   :hover {
     text-decoration: underline;
