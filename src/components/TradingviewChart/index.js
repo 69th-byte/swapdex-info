@@ -78,6 +78,17 @@ const TradingViewChart = ({
     }
   }, [chartCreated, darkMode, previousTheme, type])
 
+  useEffect(() => {
+    if (chartCreated) {
+      // remove the tooltip element
+      let tooltip = document.getElementById('tooltip-id' + type)
+      let node = document.getElementById('test-id' + type)
+      node.removeChild(tooltip)
+      chartCreated.resize(0, 0)
+      setChartCreated()
+    }
+  }, [baseChange])
+
   // if no chart created yet, create one with options and add to DOM manually
   useEffect(() => {
     if (!chartCreated && formattedData) {
@@ -159,7 +170,7 @@ const TradingViewChart = ({
       toolTip.style.backgroundColor = 'transparent'
 
       // format numbers
-      let percentChange = baseChange?.toFixed(2)
+      let percentChange = baseChange?.toFixed(2) || 0
       let formattedPercentChange = (percentChange > 0 ? '+' : '') + percentChange + '%'
       let color = percentChange >= 0 ? 'green' : 'red'
 
