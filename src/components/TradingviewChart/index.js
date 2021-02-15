@@ -49,7 +49,7 @@ const TradingViewChart = ({
       chartCreated.resize(0, 0)
       setChartCreated()
     }
-  }, [chartCreated, data, dataPrev, type])
+  }, [data])
 
   // parese the data and format for tardingview consumption
   const formattedData = data?.map((entry) => {
@@ -136,6 +136,8 @@ const TradingViewChart = ({
           priceFormatter: (val) => formattedNum(val, true),
         },
       })
+
+      console.log('chart--->', type)
 
       var series =
         type === CHART_TYPES.BAR
